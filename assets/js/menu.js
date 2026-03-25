@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuOverlay = document.getElementById('menu-overlay');
   const btnClose = document.getElementById('btn-close');
 
-  btnMenu.addEventListener('click', () => {
-    menuOverlay.classList.remove('hidden');
-  });
-
   btnClose.addEventListener('click', () => {
     menuOverlay.classList.add('hidden');
+  });
+
+  btnMenu.addEventListener('click', () => {
+    menuOverlay.classList.remove('hidden');
   });
 
   // Fecha ao clicar em qualquer botão de navegação
@@ -16,5 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       menuOverlay.classList.add('hidden');
     });
+  });
+
+  // Fecha ao clicar em qualquer lugar
+  menuOverlay.addEventListener("click", () => {
+    menuOverlay.classList.add("hidden");
   });
 });
